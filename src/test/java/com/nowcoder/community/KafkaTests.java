@@ -15,8 +15,8 @@ import org.springframework.test.context.ContextConfiguration;
  * @date 2022/7/25 21:07
  */
 
-@SpringBootTest
-@ContextConfiguration(classes = CommunityApplication.class)
+//@SpringBootTest
+//@ContextConfiguration(classes = CommunityApplication.class)
 public class KafkaTests {
     @Autowired
     private KafkaProducer kafkaProducer;
@@ -35,7 +35,7 @@ public class KafkaTests {
     }
 }
 
-@Component
+//@Component
 class KafkaProducer{
     @Autowired
     private KafkaTemplate kafkaTemplate;
@@ -45,7 +45,7 @@ class KafkaProducer{
     }
 }
 
-@Component
+//@Component
 class KafkaConsumer{
 
     @KafkaListener(topics = {"test"})

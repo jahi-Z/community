@@ -154,7 +154,7 @@ public class UserController implements CommunityConstant {
                 FileInputStream fis = new FileInputStream(fileName);
         ) {
             byte[] buffer = new byte[1024];
-            int b = 0;
+            int b;
             while ((b = fis.read(buffer)) != -1) {
                 os.write(buffer, 0, b);
             }
